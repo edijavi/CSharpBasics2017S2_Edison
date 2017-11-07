@@ -1,5 +1,6 @@
 ﻿using CustomerAppEntity;
 using System;
+using System.Collections.Generic;
 
 namespace CustomerAppUI
 {
