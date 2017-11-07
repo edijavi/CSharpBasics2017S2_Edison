@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CustomerAppEntity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CustomerAppDAL.Context
 {
-    class InMemoryContext : DbContext
+     class InMemoryContext : DbContext
     {
         static DbContextOptions<InMemoryContext> options = 
             new DbContextOptionsBuilder<InMemoryContext>()
@@ -13,9 +14,11 @@ namespace CustomerAppDAL.Context
             .Options;
 
         //Options That we want in Memory
-        public InMemoryContext() : base()
+        public InMemoryContext() : base(options)
         {
 
         }
+
+        public DbSet<Customer> Customers { get; set; }
     }
 }
