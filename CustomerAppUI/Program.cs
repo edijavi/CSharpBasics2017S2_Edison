@@ -6,11 +6,7 @@ namespace CustomerAppUI
 {
     class Program
     {
-        #region Fake DB
-        static int id = 1;
-        static List<Customer> customers = new List<Customer>();
-        #endregion            
-
+       
         static void Main(string[] args)
         {
             var cust1 = new Customer

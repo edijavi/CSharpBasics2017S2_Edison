@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomerAppEntity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,9 +11,14 @@ namespace CustomerAppBLL
     public interface ICustumerService
     {
         //C
+        Customer Create(Customer cust);
         //R
+        List<Customer> GetAll();
+        Customer Get(int Id);
         //U
+        Customer Update(Customer cust);
         //D
+        bool Delete(int Id);
 
     }
 }
