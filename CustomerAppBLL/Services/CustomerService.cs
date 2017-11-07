@@ -9,15 +9,19 @@ namespace CustomerAppBLL.Services
 {
     class CustomerService : ICustumerService
     {
-        ICustomerRepository repo;
-        public CustomerService(ICustomerRepository repo)
+        DALFacade facade;
+        public CustomerService(DALFacade facade)
         {
-            this.repo = repo;
+            this.facade = facade;
         }
 
         public Customer Create(Customer cust)
         {
-            return repo.Create(cust);
+            var uow = facade.UnitOfWork;
+            var newCust = uow.CustomerRepository.Create(cust);
+            uow.Complete();
+            uow.Dispose();
+            return newCust;
         }
 
         public Customer Delete(int Id)
