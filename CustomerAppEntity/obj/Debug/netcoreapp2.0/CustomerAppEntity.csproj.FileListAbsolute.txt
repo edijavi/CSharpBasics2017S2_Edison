@@ -1,0 +1,9 @@
+C:\work\cSharp\CustomerApp\CustomerAppEntity\bin\Debug\netcoreapp2.0\CustomerAppEntity.deps.json
+C:\work\cSharp\CustomerApp\CustomerAppEntity\bin\Debug\netcoreapp2.0\CustomerAppEntity.dll
+C:\work\cSharp\CustomerApp\CustomerAppEntity\bin\Debug\netcoreapp2.0\CustomerAppEntity.pdb
+C:\work\cSharp\CustomerApp\CustomerAppEntity\obj\Debug\netcoreapp2.0\CustomerAppEntity.csprojResolveAssemblyReference.cache
+C:\work\cSharp\CustomerApp\CustomerAppEntity\obj\Debug\netcoreapp2.0\CustomerAppEntity.csproj.CoreCompileInputs.cache
+C:\work\cSharp\CustomerApp\CustomerAppEntity\obj\Debug\netcoreapp2.0\CustomerAppEntity.AssemblyInfoInputs.cache
+C:\work\cSharp\CustomerApp\CustomerAppEntity\obj\Debug\netcoreapp2.0\CustomerAppEntity.AssemblyInfo.cs
+C:\work\cSharp\CustomerApp\CustomerAppEntity\obj\Debug\netcoreapp2.0\CustomerAppEntity.dll
+C:\work\cSharp\CustomerApp\CustomerAppEntity\obj\Debug\netcoreapp2.0\CustomerAppEntity.pdb
