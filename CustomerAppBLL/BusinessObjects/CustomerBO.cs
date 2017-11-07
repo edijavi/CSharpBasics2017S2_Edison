@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomerAppEntity
+namespace CustomerAppBLL.BusinessObjects
 {
-    public class Customer
+    public class CustomerBO
     {
         public int Id { get; set; }
 
@@ -12,6 +12,12 @@ namespace CustomerAppEntity
 
         public string LastName { get; set; }
 
+        public string FullName
+        {
+            get { return $"{FistName} {LastName}"; }
+                
+        }
+        
         public string Address { get; set; }
     }
 }

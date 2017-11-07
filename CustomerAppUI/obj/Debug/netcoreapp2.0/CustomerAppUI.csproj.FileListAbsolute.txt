@@ -5,9 +5,7 @@ C:\work\cSharp\CustomerApp\CustomerAppUI\bin\Debug\netcoreapp2.0\CustomerAppUI.d
 C:\work\cSharp\CustomerApp\CustomerAppUI\bin\Debug\netcoreapp2.0\CustomerAppUI.pdb
 C:\work\cSharp\CustomerApp\CustomerAppUI\bin\Debug\netcoreapp2.0\CustomerAppBLL.dll
 C:\work\cSharp\CustomerApp\CustomerAppUI\bin\Debug\netcoreapp2.0\CustomerAppDAL.dll
-C:\work\cSharp\CustomerApp\CustomerAppUI\bin\Debug\netcoreapp2.0\CustomerAppEntity.dll
 C:\work\cSharp\CustomerApp\CustomerAppUI\bin\Debug\netcoreapp2.0\CustomerAppBLL.pdb
-C:\work\cSharp\CustomerApp\CustomerAppUI\bin\Debug\netcoreapp2.0\CustomerAppEntity.pdb
 C:\work\cSharp\CustomerApp\CustomerAppUI\bin\Debug\netcoreapp2.0\CustomerAppDAL.pdb
 C:\work\cSharp\CustomerApp\CustomerAppUI\obj\Debug\netcoreapp2.0\CustomerAppUI.csprojResolveAssemblyReference.cache
 C:\work\cSharp\CustomerApp\CustomerAppUI\obj\Debug\netcoreapp2.0\CustomerAppUI.csproj.CoreCompileInputs.cache

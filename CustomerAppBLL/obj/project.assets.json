@@ -757,7 +757,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
-          "CustomerAppEntity": "1.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "1.1.2"
         },
         "compile": {
@@ -765,16 +764,6 @@
         },
         "runtime": {
           "bin/placeholder/CustomerAppDAL.dll": {}
-        }
-      },
-      "CustomerAppEntity/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "compile": {
-          "bin/placeholder/CustomerAppEntity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CustomerAppEntity.dll": {}
         }
       }
     }
@@ -2986,17 +2975,11 @@
       "type": "project",
       "path": "../CustomerAppDAL/CustomerAppDAL.csproj",
       "msbuildProject": "../CustomerAppDAL/CustomerAppDAL.csproj"
-    },
-    "CustomerAppEntity/1.0.0": {
-      "type": "project",
-      "path": "../CustomerAppEntity/CustomerAppEntity.csproj",
-      "msbuildProject": "../CustomerAppEntity/CustomerAppEntity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "CustomerAppDAL >= 1.0.0",
-      "CustomerAppEntity >= 1.0.0",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -3035,9 +3018,6 @@
           "projectReferences": {
             "C:\\work\\cSharp\\CustomerApp\\CustomerAppDAL\\CustomerAppDAL.csproj": {
               "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAppDAL\\CustomerAppDAL.csproj"
-            },
-            "C:\\work\\cSharp\\CustomerApp\\CustomerAppEntity\\CustomerAppEntity.csproj": {
-              "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAppEntity\\CustomerAppEntity.csproj"
             }
           }
         }

@@ -1,7 +1,7 @@
 ﻿using CustomerAppBLL;
-using CustomerAppEntity;
+using CustomerAppBLL.BusinessObjects;
+using CustomerAppDAL.Entities;
 using System;
-using System.Collections.Generic;
 
 namespace CustomerAppUI
 {
@@ -11,7 +11,7 @@ namespace CustomerAppUI
        
         static void Main(string[] args)
         {
-            var cust1 = new Customer
+            var cust1 = new CustomerBO()
             {
                 FistName = "Bob",
                 LastName = "Dylan",
@@ -22,7 +22,7 @@ namespace CustomerAppUI
             bllFacade.CustumerService.Create(cust1);
 
             //this is other kingd to write as properties
-            bllFacade.CustumerService.Create(new Customer()
+            bllFacade.CustumerService.Create(new CustomerBO()
             {
                 FistName = "Edi",
                 LastName = "Lamar",
@@ -47,29 +47,7 @@ namespace CustomerAppUI
             // - Warning and go back to menu
 
             var selection = ShowMenu(menuItems);
-
-            /*if (selection==1)
-            {
-                Console.WriteLine("List Customers");
-            }
-            else if (selection==2)
-            {
-                Console.WriteLine("Add Customers");
-            }
-            else if (selection == 3)
-            {
-                Console.WriteLine("Delete Customers");
-            }
-            else if (selection == 4)
-            {
-                Console.WriteLine("Edit Customers");
-            }
-            else
-            {
-                Console.WriteLine("Bye Bye!");
-            }
-
-            */
+            
             while (selection != 5)
             {
                 switch (selection)
@@ -121,7 +99,7 @@ namespace CustomerAppUI
             }
         }
 
-        private static Customer FindCustomerById()
+        private static CustomerBO FindCustomerById()
         {
             Console.WriteLine("Insert Customer Id: ");
             int id;
@@ -153,7 +131,7 @@ namespace CustomerAppUI
             Console.WriteLine("Address: ");
             var address = Console.ReadLine();
 
-            bllFacade.CustumerService.Create(new Customer()
+            bllFacade.CustumerService.Create(new CustomerBO()
             {
                 FistName = firstName,
                 LastName = lasttName,
@@ -168,7 +146,7 @@ namespace CustomerAppUI
 
             foreach (var customer in bllFacade.CustumerService.GetAll())
             {
-                Console.WriteLine($"Id: {customer.Id} Name: {customer.FistName} {customer.LastName} Address: {customer.Address}");
+                Console.WriteLine($"Id: {customer.Id} Name: {customer.FullName} Address: {customer.Address}");
             }
             Console.WriteLine("\n");
         }

@@ -1,57 +1,63 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using CustomerAppEntity;
 using CustomerAppDAL;
+using CustomerAppBLL.BusinessObjects;
+using CustomerAppDAL.Entities;
 using System.Linq;
+using CustomerAppBLL.Converters;
 
 namespace CustomerAppBLL.Services
 {
     class CustomerService : ICustumerService
     {
+        CustomerConverter conv = new CustomerConverter();
+       
         DALFacade facade;
         public CustomerService(DALFacade facade)
         {
             this.facade = facade;
         }
 
-        public Customer Create(Customer cust)
+        public CustomerBO Create(CustomerBO cust)
         {
             using (var uow = facade.UnitOfWork)
             {
-                var newCust = uow.CustomerRepository.Create(cust);
+                var newCust = uow.CustomerRepository.Create(conv.Convert(cust));
                 uow.Complete();
-                return newCust;
+                return conv.Convert(newCust);
             }
         }
 
-        public Customer Delete(int Id)
+        public CustomerBO Delete(int Id)
         {
             using (var uow = facade.UnitOfWork)
             {
                 var newCust = uow.CustomerRepository.Delete(Id);
                 uow.Complete();
-                return newCust;
+                return conv.Convert(newCust);
             }
         }
 
-        public Customer Get(int Id)
+        public CustomerBO Get(int Id)
         {
             using (var uow = facade.UnitOfWork)
             {
-                return uow.CustomerRepository.Get(Id);
+                return conv.Convert(uow.CustomerRepository.Get(Id));
             }
         }
 
-        public List<Customer> GetAll()
+        public List<CustomerBO> GetAll()
         {
             using (var uow = facade.UnitOfWork)
             {
-                return uow.CustomerRepository.GetAll();
+                //Customer ->CustomerBO
+                //return uow.CustomerRepository.GetAll();
+                //Se usa landa expresion pero se puede simplificar
+                return uow.CustomerRepository.GetAll().Select(conv.Convert).ToList();
             }
         }
 
-        public Customer Update(Customer cust)
+        public CustomerBO Update(CustomerBO cust)
         {
             using (var uow = facade.UnitOfWork)
             {
@@ -65,9 +71,11 @@ namespace CustomerAppBLL.Services
                 customerFromDb.LastName = cust.LastName;
                 customerFromDb.Address = cust.Address;
                 uow.Complete();
-                return customerFromDb;
+                return conv.Convert(customerFromDb);
 
             }
         }
+
+        
     }
 }

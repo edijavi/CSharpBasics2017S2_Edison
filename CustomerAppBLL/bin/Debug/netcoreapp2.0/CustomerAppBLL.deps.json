@@ -8,8 +8,7 @@
     ".NETCoreApp,Version=v2.0": {
       "CustomerAppBLL/1.0.0": {
         "dependencies": {
-          "CustomerAppDAL": "1.0.0",
-          "CustomerAppEntity": "1.0.0"
+          "CustomerAppDAL": "1.0.0"
         },
         "runtime": {
           "CustomerAppBLL.dll": {}
@@ -350,16 +349,10 @@
       },
       "CustomerAppDAL/1.0.0": {
         "dependencies": {
-          "CustomerAppEntity": "1.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "1.1.2"
         },
         "runtime": {
           "CustomerAppDAL.dll": {}
-        }
-      },
-      "CustomerAppEntity/1.0.0": {
-        "runtime": {
-          "CustomerAppEntity.dll": {}
         }
       }
     }
@@ -644,11 +637,6 @@
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
     "CustomerAppDAL/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CustomerAppEntity/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

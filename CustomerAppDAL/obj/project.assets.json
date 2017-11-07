@@ -752,16 +752,6 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
-      },
-      "CustomerAppEntity/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "compile": {
-          "bin/placeholder/CustomerAppEntity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CustomerAppEntity.dll": {}
-        }
       }
     }
   },
@@ -2967,16 +2957,10 @@
         "system.threading.tasks.4.3.0.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
-    },
-    "CustomerAppEntity/1.0.0": {
-      "type": "project",
-      "path": "../CustomerAppEntity/CustomerAppEntity.csproj",
-      "msbuildProject": "../CustomerAppEntity/CustomerAppEntity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "CustomerAppEntity >= 1.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 1.1.2",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
@@ -3013,11 +2997,7 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {
-            "C:\\work\\cSharp\\CustomerApp\\CustomerAppEntity\\CustomerAppEntity.csproj": {
-              "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAppEntity\\CustomerAppEntity.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

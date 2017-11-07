@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CustomerAppEntity;
+﻿using System.Collections.Generic;
 using CustomerAppDAL.Context;
 using System.Linq;
-using CustomerAppDAL;
-
+using CustomerAppDAL.Entities;
 
 namespace CustomerAppDAL.Repositories
 {

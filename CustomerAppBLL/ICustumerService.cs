@@ -1,7 +1,6 @@
-﻿using CustomerAppEntity;
-using System;
+﻿using CustomerAppBLL.BusinessObjects;
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace CustomerAppBLL
 {
@@ -11,14 +10,14 @@ namespace CustomerAppBLL
     public interface ICustumerService
     {
         //C
-        Customer Create(Customer cust);
+        CustomerBO Create(CustomerBO cust);
         //R
-        List<Customer> GetAll();
-        Customer Get(int Id);
+        List<CustomerBO> GetAll();
+        CustomerBO Get(int Id);
         //U
-        Customer Update(Customer cust);
+        CustomerBO Update(CustomerBO cust);
         //D
-        Customer Delete(int Id);
+        CustomerBO Delete(int Id);
 
     }
 }
