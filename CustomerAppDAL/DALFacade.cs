@@ -1,4 +1,5 @@
 ﻿using CustomerAppDAL.Repositories;
+using CustomerAppDAL.UOW;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,7 +15,14 @@ namespace CustomerAppDAL
             {
                 return new CustomerRepositoryEFMemory(new Context.InMemoryContext());
             }
+        }
 
+        public IUnitOfWork UnitOfWork
+        {
+            get
+            {
+                return new UnitOfWorkMem();
+            }
         }
     }
 }
