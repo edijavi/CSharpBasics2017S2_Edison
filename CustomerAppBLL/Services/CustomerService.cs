@@ -17,41 +17,57 @@ namespace CustomerAppBLL.Services
 
         public Customer Create(Customer cust)
         {
-            var uow = facade.UnitOfWork;
-            var newCust = uow.CustomerRepository.Create(cust);
-            uow.Complete();
-            uow.Dispose();
-            return newCust;
+            using (var uow = facade.UnitOfWork)
+            {
+                var newCust = uow.CustomerRepository.Create(cust);
+                uow.Complete();
+                return newCust;
+            }
         }
 
         public Customer Delete(int Id)
         {
-
-            return repo.Delete(Id); 
+            using (var uow = facade.UnitOfWork)
+            {
+                var newCust = uow.CustomerRepository.Delete(Id);
+                uow.Complete();
+                return newCust;
+            }
         }
 
         public Customer Get(int Id)
         {
-            return repo.Get(Id); 
+            using (var uow = facade.UnitOfWork)
+            {
+                return uow.CustomerRepository.Get(Id);
+            }
         }
 
         public List<Customer> GetAll()
         {
-            return repo.GetAll(); 
+            using (var uow = facade.UnitOfWork)
+            {
+                return uow.CustomerRepository.GetAll();
+            }
         }
 
         public Customer Update(Customer cust)
         {
-            var customerFromDb = Get(cust.Id);
-            if(customerFromDb == null)
+            using (var uow = facade.UnitOfWork)
             {
-                throw new InvalidOperationException("Customer not found");
+                var customerFromDb = uow.CustomerRepository.Get(cust.Id);
+                if (customerFromDb == null)
+                {
+                    throw new InvalidOperationException("Customer not found");
+                }
+
+                customerFromDb.FistName = cust.FistName;
+                customerFromDb.LastName = cust.LastName;
+                customerFromDb.Address = cust.Address;
+                uow.Complete();
+                return customerFromDb;
+
             }
-            customerFromDb.FistName = cust.FistName;
-            customerFromDb.LastName = cust.LastName;
-            customerFromDb.Address = customerFromDb.Address;
-            //save Changes
-            return customerFromDb;
         }
     }
 }

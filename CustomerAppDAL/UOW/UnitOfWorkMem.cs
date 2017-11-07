@@ -8,7 +8,7 @@ namespace CustomerAppDAL.UOW
 {
     public class UnitOfWorkMem : IUnitOfWork
     {
-        public ICustomerRepository CustomerRepository { get; internal set; };
+        public ICustomerRepository CustomerRepository { get; internal set; }
         private InMemoryContext context;
 
         public UnitOfWorkMem()
@@ -19,12 +19,14 @@ namespace CustomerAppDAL.UOW
 
         public int Complete()
         {
-            throw new NotImplementedException();
+            //The number of objects written to the underlying database.
+            return context.SaveChanges();
+                
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            context.Dispose();
         }
     }
 }
