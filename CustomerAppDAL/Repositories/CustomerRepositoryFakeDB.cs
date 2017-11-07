@@ -40,7 +40,7 @@ namespace CustomerAppDAL.Repositories
 
         public List<Customer> GetAll()
         {
-            throw new NotImplementedException();
+            return new List<Customer>(Customers);
         }
     }
 }

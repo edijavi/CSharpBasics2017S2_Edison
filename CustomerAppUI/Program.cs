@@ -17,8 +17,11 @@ namespace CustomerAppUI
                 LastName = "Dylan",
                 Address = "BongoStreet 232"
             };
+            //this is one kingd to write as methot
+            //bllFacade.GetCustumerService().Create(cust1);
             bllFacade.CustumerService.Create(cust1);
 
+            //this is other kingd to write as properties
             bllFacade.CustumerService.Create(new Customer()
             {
                 FistName = "Edi",
@@ -134,13 +137,9 @@ namespace CustomerAppUI
             if (customerFound != null )
             {
                 bllFacade.CustumerService.Delete(customerFound.Id);
-                Console.WriteLine("Customer was Deleted");
             }
-            else
-            {
-                Console.WriteLine("Customer not Found!");
-            }
-            
+            var response = customerFound == null ? "Customer not Found!" : "Customer was Deleted";
+            Console.WriteLine(response);
         }
 
         private static void AddCustomers()

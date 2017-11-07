@@ -9,25 +9,31 @@ namespace CustomerAppBLL.Services
 {
     class CustomerService : ICustumerService
     {
+        ICustomerRepository repo;
+        public CustomerService(ICustomerRepository repo)
+        {
+            this.repo = repo;
+        }
+
         public Customer Create(Customer cust)
         {
-            return null;
+            return repo.Create(cust);
         }
 
         public Customer Delete(int Id)
         {
 
-            return null;
+            return repo.Delete(Id); 
         }
 
         public Customer Get(int Id)
         {
-            return null;
+            return repo.Get(Id); 
         }
 
         public List<Customer> GetAll()
         {
-            return null;
+            return repo.GetAll(); 
         }
 
         public Customer Update(Customer cust)
@@ -40,6 +46,7 @@ namespace CustomerAppBLL.Services
             customerFromDb.FistName = cust.FistName;
             customerFromDb.LastName = cust.LastName;
             customerFromDb.Address = customerFromDb.Address;
+            //save Changes
             return customerFromDb;
         }
     }
