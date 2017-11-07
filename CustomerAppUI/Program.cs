@@ -1,4 +1,5 @@
-﻿using CustomerAppEntity;
+﻿using CustomerAppBLL;
+using CustomerAppEntity;
 using System;
 using System.Collections.Generic;
 
@@ -6,24 +7,24 @@ namespace CustomerAppUI
 {
     class Program
     {
+        static BLLFacade bllFacade = new BLLFacade();
        
         static void Main(string[] args)
         {
             var cust1 = new Customer
             {
-                Id = id++,
                 FistName = "Bob",
-                LastName = "Dilan",
+                LastName = "Dylan",
                 Address = "BongoStreet 232"
             };
-            customers.Add(cust1);
+            bllFacade.CustumerService.Create(cust1);
 
-            customers.Add(new Customer()
+            bllFacade.CustumerService.Create(new Customer()
             {
-                Id = id++,
-                FistName = "Edison",
+                FistName = "Edi",
                 LastName = "Lamar",
                 Address = "Sp Kirkevej 129"
+
             });
 
             //Show the first customer saved internally
@@ -100,12 +101,19 @@ namespace CustomerAppUI
         private static void EditCustomer()
         {
             var customer = FindCustomerById();
-            Console.WriteLine("First Name: ");
-            customer.FistName = Console.ReadLine();
-            Console.WriteLine("Last Name: ");
-            customer.LastName = Console.ReadLine();
-            Console.WriteLine("Address: ");
-            customer.Address = Console.ReadLine();
+            if (customer != null)
+            {
+                Console.WriteLine("First Name: ");
+                customer.FistName = Console.ReadLine();
+                Console.WriteLine("Last Name: ");
+                customer.LastName = Console.ReadLine();
+                Console.WriteLine("Address: ");
+                customer.Address = Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine(  "Customer not found!");     
+            }
         }
 
         private static Customer FindCustomerById()
@@ -115,27 +123,24 @@ namespace CustomerAppUI
             while (!int.TryParse(Console.ReadLine(), out id))
             {
                 Console.WriteLine("Please insert a number");
-
             }
-            foreach (var customer in customers)
-            {
-                if (customer.Id == id)
-                {
-                    return customer;
-                }
-            }
-            return null;
+            return bllFacade.CustumerService.Get(id);
         }
 
         private static void DeleteCustomer()
         {
 
             var customerFound = FindCustomerById();
-
-            if (customerFound != null)
+            if (customerFound != null )
             {
-                customers.Remove(customerFound);
+                bllFacade.CustumerService.Delete(customerFound.Id);
+                Console.WriteLine("Customer was Deleted");
             }
+            else
+            {
+                Console.WriteLine("Customer not Found!");
+            }
+            
         }
 
         private static void AddCustomers()
@@ -147,12 +152,11 @@ namespace CustomerAppUI
             Console.WriteLine("Address: ");
             var address = Console.ReadLine();
 
-            customers.Add(new Customer()
+            bllFacade.CustumerService.Create(new Customer()
             {
-                Id = id++,
                 FistName = firstName,
                 LastName = lasttName,
-                Address = address,
+                Address = address
             });
 
         }
@@ -161,7 +165,7 @@ namespace CustomerAppUI
         {
             Console.WriteLine("\nList of Customers");
 
-            foreach (var customer in customers)
+            foreach (var customer in bllFacade.CustumerService.GetAll())
             {
                 Console.WriteLine($"Id: {customer.Id} Name: {customer.FistName} {customer.LastName} Address: {customer.Address}");
             }

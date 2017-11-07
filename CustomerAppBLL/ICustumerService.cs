@@ -18,7 +18,7 @@ namespace CustomerAppBLL
         //U
         Customer Update(Customer cust);
         //D
-        bool Delete(int Id);
+        Customer Delete(int Id);
 
     }
 }
