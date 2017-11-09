@@ -3011,11 +3011,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\work\\cSharp\\CustomerApp\\CustomerAppUI\\CustomerAppUI.csproj",
+      "projectUniqueName": "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppUI\\CustomerAppUI.csproj",
       "projectName": "CustomerAppUI",
-      "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAppUI\\CustomerAppUI.csproj",
+      "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppUI\\CustomerAppUI.csproj",
       "packagesPath": "C:\\Users\\edila\\.nuget\\packages\\",
-      "outputPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAppUI\\obj\\",
+      "outputPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3034,8 +3034,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\work\\cSharp\\CustomerApp\\CustomerAppBLL\\CustomerAppBLL.csproj": {
-              "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAppBLL\\CustomerAppBLL.csproj"
+            "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppBLL\\CustomerAppBLL.csproj": {
+              "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppBLL\\CustomerAppBLL.csproj"
             }
           }
         }

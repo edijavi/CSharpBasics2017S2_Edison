@@ -2975,11 +2975,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\work\\cSharp\\CustomerApp\\CustomerAppDAL\\CustomerAppDAL.csproj",
+      "projectUniqueName": "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppDAL\\CustomerAppDAL.csproj",
       "projectName": "CustomerAppDAL",
-      "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAppDAL\\CustomerAppDAL.csproj",
+      "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppDAL\\CustomerAppDAL.csproj",
       "packagesPath": "C:\\Users\\edila\\.nuget\\packages\\",
-      "outputPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAppDAL\\obj\\",
+      "outputPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppDAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

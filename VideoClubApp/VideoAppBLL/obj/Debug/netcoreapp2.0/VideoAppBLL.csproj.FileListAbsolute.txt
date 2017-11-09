@@ -1,0 +1,11 @@
+C:\Users\edila\Desktop\VideoClubApp\VideoAppBLL\bin\Debug\netcoreapp2.0\VideoAppBLL.deps.json
+C:\Users\edila\Desktop\VideoClubApp\VideoAppBLL\bin\Debug\netcoreapp2.0\VideoAppBLL.dll
+C:\Users\edila\Desktop\VideoClubApp\VideoAppBLL\bin\Debug\netcoreapp2.0\VideoAppBLL.pdb
+C:\Users\edila\Desktop\VideoClubApp\VideoAppBLL\bin\Debug\netcoreapp2.0\VideoAppDAL.dll
+C:\Users\edila\Desktop\VideoClubApp\VideoAppBLL\bin\Debug\netcoreapp2.0\VideoAppDAL.pdb
+C:\Users\edila\Desktop\VideoClubApp\VideoAppBLL\obj\Debug\netcoreapp2.0\VideoAppBLL.csprojResolveAssemblyReference.cache
+C:\Users\edila\Desktop\VideoClubApp\VideoAppBLL\obj\Debug\netcoreapp2.0\VideoAppBLL.csproj.CoreCompileInputs.cache
+C:\Users\edila\Desktop\VideoClubApp\VideoAppBLL\obj\Debug\netcoreapp2.0\VideoAppBLL.AssemblyInfoInputs.cache
+C:\Users\edila\Desktop\VideoClubApp\VideoAppBLL\obj\Debug\netcoreapp2.0\VideoAppBLL.AssemblyInfo.cs
+C:\Users\edila\Desktop\VideoClubApp\VideoAppBLL\obj\Debug\netcoreapp2.0\VideoAppBLL.dll
+C:\Users\edila\Desktop\VideoClubApp\VideoAppBLL\obj\Debug\netcoreapp2.0\VideoAppBLL.pdb

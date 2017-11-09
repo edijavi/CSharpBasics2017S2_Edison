@@ -2993,11 +2993,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\work\\cSharp\\CustomerApp\\CustomerAppBLL\\CustomerAppBLL.csproj",
+      "projectUniqueName": "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppBLL\\CustomerAppBLL.csproj",
       "projectName": "CustomerAppBLL",
-      "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAppBLL\\CustomerAppBLL.csproj",
+      "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppBLL\\CustomerAppBLL.csproj",
       "packagesPath": "C:\\Users\\edila\\.nuget\\packages\\",
-      "outputPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAppBLL\\obj\\",
+      "outputPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppBLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3016,8 +3016,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\work\\cSharp\\CustomerApp\\CustomerAppDAL\\CustomerAppDAL.csproj": {
-              "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAppDAL\\CustomerAppDAL.csproj"
+            "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppDAL\\CustomerAppDAL.csproj": {
+              "projectPath": "C:\\work\\cSharp\\CustomerApp\\CustomerAPP\\CustomerAppDAL\\CustomerAppDAL.csproj"
             }
           }
         }
